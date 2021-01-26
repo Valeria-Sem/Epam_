@@ -1,16 +1,15 @@
-package com.company;
+package com.task_9;
 
 import java.util.Scanner;
 
 public class Main {
-    final static double Pi = 3.14;
 
     static double calculateArea(double radius){
-       return Pi * Math.pow(radius, 2);
+       return Math.PI * Math.pow(radius, 2);
     }
 
     static double calculateLengthOfCircle(double radius){
-        return 2 * Pi * radius;
+        return 2 * Math.PI * radius;
     }
 
     public static void main(String[] args) {
