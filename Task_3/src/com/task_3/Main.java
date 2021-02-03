@@ -7,11 +7,11 @@ public class Main {
         double radius = squareSide / 2;
         double inscribedSquare = 0.5 * Math.pow(radius, 2) * 4;
 
-        return secondSquare;
+        return inscribedSquare;
     }
 
-    static double getDeltaSquare(double givenSquare, double secondSquare){    
-        return givenSquare / secondSquare;
+    static double getDeltaSquare(double givenSquare, double inscribedSquare){    
+        return givenSquare / inscribedSquare;
     }
 
     public static void main(String[] args) {
