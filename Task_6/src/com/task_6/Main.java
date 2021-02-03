@@ -3,25 +3,25 @@ package com.task_6;
 import java.util.Scanner;
 
 public class Main {
-    static int sec, min, hour;
 
-    static void determiningTime(int n){
-        hour = n/3600;
+    static String determineTime(int n){
+        int hour = n/3600;
         n -= hour * 3600;
-        min = n / 60;
+        int min = n / 60;
         n -= min * 60;
-        sec = n;
+        int sec = n;
+
+        String str = "In " + n + " seconds - " + hour + " hour " +
+                min + " min " + sec + " sec";
+
+        return str;
     }
 
     public static void main(String[] args) {
-	    int n = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter seconds: ");
-        n = scanner.nextInt();
+        int n = scanner.nextInt();
 
-        determiningTime(n);
-        System.out.println("In " + n + " seconds - " + hour + " hour " +
-                min + " min " + sec + " sec");
-
+        System.out.println(determineTime(n));
     }
 }

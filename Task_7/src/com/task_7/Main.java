@@ -7,9 +7,10 @@ public class Main {
     static double calculatePointCoordinates(double x, double y){
        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
+
     public static void main(String[] args) {
-	    double x1, x2, y1, y2;
-	    double A, B;
+        double x1, x2, y1, y2;
+        double A, B;
 
         Scanner scanner = new Scanner(System.in);
         x1 = scanner.nextDouble();
@@ -27,6 +28,5 @@ public class Main {
         } else {
             System.out.println("Points A and B at the same distance");
         }
-
     }
 }

@@ -3,24 +3,22 @@ package com.task_5;
 import java.util.Scanner;
 
 public class Main {
-    static boolean sum(int n) {
+
+    static boolean isPerfectNumber(int numb) {
         int summa = 0;
-        for(int i = 1; i < n; i++) {
-            if(n % i == 0)
+
+        for(int i = 1; i < numb; i++) {
+            if(numb % i == 0)
                 summa += i;
         }
-        return summa == n;
 
+        return summa == numb;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
+        int number = scanner.nextInt();
 
-        if(sum(a)) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+        System.out.println(isPerfectNumber(number));
     }
 }

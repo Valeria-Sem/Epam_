@@ -6,13 +6,19 @@ import java.util.Scanner;
 
 public class Main {
 
-    static int findingPositiveNumbers(List<Integer> sequence){
+    static boolean isPositiveNumbers(List<Integer> sequence){
         int count = 0;
+        boolean isPositive = false;
+
         for(int seq: sequence){
             if (seq % 2 == 0)
                 count++;
         }
-        return count;
+
+        if (count >= 2)
+            isPositive = true;
+
+        return isPositive;
     }
 
     public static void main(String[] args) {
@@ -34,10 +40,6 @@ public class Main {
         sequence.add(C);
         sequence.add(D);
 
-        if (findingPositiveNumbers(sequence) >= 2){
-            System.out.print("True");
-        } else {
-            System.out.print("False");
-        }
+        System.out.print(isPositiveNumbers(sequence));
     }
 }
